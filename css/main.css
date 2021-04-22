@@ -1,0 +1,121 @@
+*{
+    box-sizing: border-box;
+}
+body{
+       font-family:Arial, Helvetica, sans-serif;
+       background: linear-gradient(#009ffd,#2a2a72);
+
+}
+.head{
+    width:80%;
+    height: 80px;
+    margin: 10px auto;
+    padding:0 25px;
+    border: 3px solid #27E7E7;
+    font-size: 24px;
+    line-height:80px;
+    background-color: #27e7e742;
+}
+.head .name{
+    float: left;
+}
+.name span{
+    color: #204028;
+}
+.head .number{
+    float: right;
+}
+.number span{
+    color:#D90404;
+}
+.card-zone{
+    width:80%;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.card{
+    width: 120px;
+    height:120px;
+    perspective: 1000px;
+    background-color:transparent;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+.card-inner{
+   width: 100%;
+   height: 100%;
+   position: relative;
+   transition: transform .5s;
+   transform-style: preserve-3d;
+}
+.card-inner.flipped{
+    transform: rotateY(180deg);
+}
+.card .front{
+    width:100%;
+    height:100%;
+    border:3px solid #27E7E7;
+    background-color: #333;
+    text-align: center;
+    line-height:120px;
+    font-size:100px;
+    font-weight: bold;
+    color:#fff;
+    z-index: 2;
+}
+.card .back{
+    width: 100%;
+    height: 100%;
+    background-color: #3EB595;
+    border: 3px solid #6CFFFF;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+.back img{
+    width:80%;
+    height:80%;
+}
+.card .face{
+    position:absolute;
+    backface-visibility: hidden;
+}
+.start-game{
+    background-color: #eaf205e3;
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 780px;;
+}
+.start-game div{
+    color: #ff3001;
+    font-size:44px;
+    font-weight:bold;
+    background-color: #d62b04af;
+    padding: 20px 35px;
+    border-radius:4px;
+    cursor:pointer;
+    position: fixed;
+    top: 42%;
+    left:38.5%;
+}
+.game-over{
+    width:40%;
+    height:30%;
+    background-color:#d62b04af;
+    position: fixed;
+    top:30%;
+    left:30%;
+    border-radius:6px;
+    color:#fff;
+    font-size: 70px;
+    font-weight: bold;
+    text-align:center;
+    line-height:180px;
+    display: none;
+}
